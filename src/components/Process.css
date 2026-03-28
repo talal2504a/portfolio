@@ -1,0 +1,26 @@
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.process-card {
+  background: #0d0d0d;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 20px;
+  padding: 32px 24px;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.process-card:hover { border-color: rgba(255,255,255,0.15); transform: translateY(-4px); }
+.process-num {
+  font-size: 52px;
+  font-weight: 900;
+  color: rgba(255,255,255,0.1);
+  line-height: 1;
+  margin-bottom: 20px;
+  letter-spacing: -0.05em;
+}
+.process-title { font-size: 17px; font-weight: 700; margin-bottom: 12px; }
+.process-desc { font-size: 14px; color: rgba(255,255,255,0.42); line-height: 1.75; }
+
+@media (max-width: 1024px) { .process-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .process-grid { grid-template-columns: 1fr; } }

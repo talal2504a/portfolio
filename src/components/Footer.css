@@ -1,0 +1,99 @@
+.footer-cta {
+  position: relative;
+  padding: 100px 40px;
+  text-align: center;
+  background: #000;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  overflow: hidden;
+}
+.fcta-glow {
+  position: absolute;
+  bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 600px; height: 260px;
+  background: radial-gradient(ellipse at 50% 100%, rgba(70,100,255,0.14) 0%, transparent 70%);
+  pointer-events: none;
+}
+.fcta-sub {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.38);
+  margin-bottom: 18px;
+}
+.fcta-title {
+  font-size: clamp(36px, 5.5vw, 68px);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  margin-bottom: 44px;
+}
+.fcta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.22);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 14px 26px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.25s;
+  text-decoration: none;
+}
+.fcta-btn:hover { background: rgba(255,255,255,0.14); border-color: rgba(255,255,255,0.38); transform: translateY(-2px); }
+.fcta-arrow {
+  width: 28px; height: 28px;
+  background: #fff;
+  color: #000;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+.fcta-btn:hover .fcta-arrow { transform: translateX(2px); }
+
+.footer {
+  background: #000;
+  padding: 80px 60px 40px;
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+.f-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 16px;
+}
+.f-email { font-size: 15px; font-weight: 700; }
+.footer-right { display: flex; gap: 80px; }
+.f-col { display: flex; flex-direction: column; gap: 8px; }
+.f-link {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  transition: opacity 0.2s;
+}
+.f-link:hover { opacity: 0.6; }
+.footer-big-logo {
+  font-size: clamp(80px, 16vw, 220px);
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  text-align: center;
+  line-height: 0.8;
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .footer { padding: 60px 24px 30px; }
+  .footer-inner { flex-direction: column; gap: 40px; margin-bottom: 60px; }
+  .footer-right { flex-direction: column; gap: 24px; }
+  .fcta-title { font-size: 36px; }
+}

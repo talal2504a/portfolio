@@ -1,0 +1,33 @@
+.ticker {
+  background: transparent;
+  padding: 60px 0;
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+}
+.ticker-content {
+  display: flex;
+  gap: 15px;
+  width: fit-content;
+  animation: marquee 40s linear infinite;
+}
+.ticker-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  padding: 10px 24px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.ticker-icon { font-size: 16px; opacity: 0.8; }
+.ticker-label { font-size: 14px; font-weight: 500; color: #fff; }
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
